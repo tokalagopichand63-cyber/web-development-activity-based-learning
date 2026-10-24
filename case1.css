@@ -1,0 +1,398 @@
+/* CSS Reset & Variables */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #556B2F; /* Calming Olive Green */
+    --accent-color: #E6D5C3;  /* Soft Warm Sand */
+    --text-dark: #2F3E46;
+    --text-light: #6C757D;
+    --bg-light: #F7F5F0;      /* Warm Off-White */
+    --white: #FFFFFF;
+    --transition: all 0.3s ease;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: var(--text-dark);
+    background-color: var(--white);
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    color: var(--text-dark);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header */
+.header {
+    background-color: var(--white);
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.logo span {
+    color: var(--text-dark);
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.nav-menu a:hover {
+    color: var(--primary-color);
+}
+
+.btn-nav {
+    background-color: var(--primary-color);
+    color: var(--white) !important;
+    padding: 10px 20px;
+    border-radius: 30px;
+}
+
+.btn-nav:hover {
+    opacity: 0.9;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(47, 62, 70, 0.4), rgba(47, 62, 70, 0.4)), url('https://images.unsplash.com/photo-1545205597-3d9d02c29597?auto=format&fit=crop&q=80&w=1600') no-repeat center center/cover;
+    height: 85vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: var(--white);
+}
+
+.hero-content {
+    max-width: 700px;
+}
+
+.hero h1 {
+    font-size: 3.2rem;
+    color: var(--white);
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.15rem;
+    margin-bottom: 30px;
+    font-weight: 300;
+}
+
+.btn-primary, .btn-outline {
+    display: inline-block;
+    padding: 12px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    background-color: #425324;
+    transform: translateY(-2px);
+}
+
+.btn-outline {
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+.btn-outline:hover {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+/* General Section Layout */
+.section {
+    padding: 80px 0;
+}
+
+.bg-light {
+    background-color: var(--bg-light);
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.section-title p {
+    color: var(--text-light);
+}
+
+/* Grids */
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+/* Cards (Yoga Poses) */
+.card {
+    background: var(--white);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: var(--transition);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.card-img-placeholder {
+    height: 220px;
+    background-size: cover;
+    background-position: center;
+}
+
+.pose-1 { background-image: url('https://images.unsplash.com/photo-1599447421416-3414500d18a5?auto=format&fit=crop&q=80&w=600'); }
+.pose-2 { background-image: url('https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&q=80&w=600'); }
+.pose-3 { background-image: url('https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&q=80&w=600'); }
+
+.card-body {
+    padding: 25px;
+}
+
+.card-body h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.card-body p {
+    color: var(--text-light);
+    font-size: 0.95rem;
+}
+
+/* Instructor Cards */
+.instructor-card {
+    text-align: center;
+    background: var(--white);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+}
+
+.instructor-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin: 0 auto 20px auto;
+    background-size: cover;
+    background-position: center;
+}
+
+.instructor-card:nth-child(1) .instructor-img { background-image: url('https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=400'); }
+.instructor-card:nth-child(2) .instructor-img { background-image: url('https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=400'); }
+.instructor-card:nth-child(3) .instructor-img { background-image: url('https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=400'); }
+
+.instructor-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.instructor-card .role {
+    display: block;
+    color: var(--primary-color);
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.instructor-card p {
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
+/* Schedule Table */
+.table-container {
+    overflow-x: auto;
+}
+
+.schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--white);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.schedule-table th, .schedule-table td {
+    padding: 18px 25px;
+    text-align: left;
+}
+
+.schedule-table th {
+    background-color: var(--primary-color);
+    color: var(--white);
+    font-weight: 600;
+}
+
+.schedule-table tr:nth-child(even) {
+    background-color: var(--bg-light);
+}
+
+.schedule-table td {
+    color: var(--text-dark);
+    font-size: 0.95rem;
+}
+
+/* Pricing / Membership Cards */
+.pricing-card {
+    background: var(--white);
+    border: 1px solid #EAE5D9;
+    border-radius: 12px;
+    padding: 40px 30px;
+    position: relative;
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+}
+
+.pricing-card.popular {
+    border-color: var(--primary-color);
+    box-shadow: 0 10px 30px rgba(85, 107, 47, 0.15);
+    transform: scale(1.03);
+}
+
+.badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--primary-color);
+    color: var(--white);
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 20px;
+    text-transform: uppercase;
+}
+
+.pricing-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+}
+
+.price {
+    font-size: 2.5rem;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 25px;
+}
+
+.price span {
+    font-size: 0.9rem;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: var(--text-light);
+    font-weight: 400;
+}
+
+.features {
+    list-style: none;
+    margin-bottom: 30px;
+    flex-grow: 1;
+}
+
+.features li {
+    margin-bottom: 12px;
+    color: var(--text-light);
+    font-size: 0.95rem;
+    position: relative;
+    padding-left: 20px;
+}
+
+.features li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.pricing-card .btn-primary, .pricing-card .btn-outline {
+    text-align: center;
+}
+
+/* Footer */
+.footer {
+    background-color: var(--text-dark);
+    color: var(--white);
+    padding: 40px 0;
+    text-align: center;
+}
+
+.footer .logo span {
+    color: var(--primary-color);
+}
+
+.footer p {
+    color: #A0A5A8;
+    font-size: 0.9rem;
+    margin-top: 10px;
+}
+
+/* Responsive Design Adjustments */
+@media(max-width: 768px) {
+    .nav-menu {
+        display: none; /* Can be expanded with a hamburger menu for complete mobile functionality */
+    }
+    
+    .hero h1 {
+        font-size: 2.4rem;
+    }
+
+    .pricing-card.popular {
+        transform: none;
+    }
+}
